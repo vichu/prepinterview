@@ -1,3 +1,17 @@
+/*
+
+For every word there are 2^n different ways of writing the word if you take into account upper/lower case letters. Eg for "word" we can write;
+
+word
+Word
+wOrd
+WOrd
+woRd
+WoRd
+etc
+
+*/
+
 public class GenerateAllCases  {
 	
 	public void generateAllTheCase(String word)  {

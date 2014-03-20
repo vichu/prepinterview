@@ -1,3 +1,12 @@
+/*
+Given a list of words, write a function which
+# takes in the list, and groups the words together
+# according to which ones are anagrams of each other
+# e.g.
+# input = ["art", "rat", "bats", "banana", "stab", "tar"]
+# output = [["art", "rat", "tar], ["bats", "stab"], ["banana"]]
+*/
+
 import java.util.*;
 
 class AnagramsGroup {
@@ -36,7 +45,7 @@ class AnagramsGroup {
 	public static void main(String[] args) {
 		AnagramsGroup groupAnagrams = new AnagramsGroup();
 		
-		String[] str = {"ab","ba", "car","arc","sat"};
+		String[] str = {"art", "rat", "bats", "banana", "stab", "tar"};
 		System.out.println(groupAnagrams.getAnagramsGroup(str));
 	}
 	
