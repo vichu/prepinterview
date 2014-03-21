@@ -1,3 +1,15 @@
+/*
+
+An implementation of LinkedList with the following functionality
+
+- InsertAtTheLast -----> Theta(n)
+- deleteElement(element) ----> Theta(n)
+- listAllElements-----> Theta(n)
+- search(element) -----> Theta(n)
+- reverse ------> Theta(n)
+
+*/
+
 class LinkedListDS {
 	
 	public String data = null ;
@@ -89,6 +101,30 @@ class LinkedListDS {
 
 		return null;
 	}
+    
+    public LinkedListDS reverse() {
+        
+        LinkedListDS prev = null;
+        LinkedListDS current = head;
+        LinkedListDS next = current.next;
+        
+        if(head == null)
+            return null;
+        if(next == null)
+            return head;
+        
+        while(current != null) {
+            current.next = prev;
+            prev = current;
+            current = next;
+            if(current != null)
+                next = current.next;
+        }
+        
+        head = prev;
+        return head;
+        
+    }
 	
 	@Override 
 	public String toString(){
@@ -130,5 +166,25 @@ public class LinkedListVichu{
 		
 		System.out.println("Search for Two : "+ element.search("Two"));
 		System.out.println("Search for One : "+ element.search("One"));
+        
+        System.out.println("Delete TWO:");
+        element.deleteElement("Two");
+        
+        System.out.println("List all elements: ");
+        element.listAllElements();
+        
+        System.out.println("No elements\n-----------------\nAdding 1, 2, 3 for reversal");
+        element.insertAtTheLast("1");
+		element.insertAtTheLast("2");
+		element.insertAtTheLast("3");
+		System.out.println("Printing all elements:");
+		element.listAllElements();
+        
+        System.out.println("Reversal of linkedlist with just head pointer...");
+        element.reverse();
+        System.out.println("Print reverse elements now");
+        element.listAllElements();
+        
+        
 	}
 }
