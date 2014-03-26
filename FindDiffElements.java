@@ -80,7 +80,7 @@ public class FindDiffElements {
         System.out.println("Different elements are "+res[0]+" and "+ res[1]);
         
         int[] res1 = obj.findDiffExtraSpace(a1,a2);
-        System.out.println("Different elements with extra space are "+res[0]+" and "+ res[1]);
+        System.out.println("Different elements with extra space are "+res1[0]+" and "+ res1[1]);
         
     }
     
