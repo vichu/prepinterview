@@ -1,3 +1,11 @@
+/*
+
+My Yelp! interview question.
+
+Write a function to add two integer Strings and output the sum of the two integer Strings.
+
+*/
+
 public class AddTwoStrings {
     
     public String add(String no1, String no2) {
