@@ -38,7 +38,7 @@ public class AddTwoStrings {
             resultString.append( result ); 
         }
         
-        return resultString.reverse().toString();
+        return resultString.append(carry).reverse().toString();
         
     }
     
@@ -59,6 +59,6 @@ public class AddTwoStrings {
     public static void main(String[] args) {
         
         AddTwoStrings obj = new AddTwoStrings();
-        System.out.println(obj.add("123636636663828388823838838388832", "8"));
+        System.out.println(obj.add("999", "932"));
     }
 }
